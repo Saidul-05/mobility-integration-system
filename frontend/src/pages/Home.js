@@ -5,22 +5,19 @@ function Home() {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    // Example: call Django API for services
+    // Example: call Django for /services/
     api.get('/services/')
-      .then(response => {
-        setServices(response.data);
-      })
+      .then(res => setServices(res.data))
       .catch(err => console.error(err));
   }, []);
 
   return (
     <div style={{ padding: '1rem' }}>
-      <h2>Welcome to Mobility Integration System</h2>
-      <p>Below is an example list of services from the Django backend:</p>
+      <h2>Mobility Integration System</h2>
       <ul>
-        {services.map(service => (
-          <li key={service.id}>
-            {service.name} - {service.category} (${service.price})
+        {services.map(svc => (
+          <li key={svc.id}>
+            {svc.name} - {svc.category} (${svc.price})
           </li>
         ))}
       </ul>
