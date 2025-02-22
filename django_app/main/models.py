@@ -2,9 +2,9 @@ from django.db import models
 
 class Service(models.Model):
     CATEGORY_CHOICES = [
-        ('repair', 'Repair Service'),
-        ('towing', 'Towing Service'),
-        ('parts', 'Spare Parts'),
+        ("repair", "Repair Service"),
+        ("towing", "Towing Service"),
+        ("parts", "Spare Parts"),
     ]
 
     name = models.CharField(max_length=255)
