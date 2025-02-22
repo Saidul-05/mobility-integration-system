@@ -1,1 +1,2 @@
-# Empty init file
+
+# Empty file for package initialization
