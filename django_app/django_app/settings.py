@@ -15,7 +15,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    "main",  # Our main Django app
+    "main",  # Our main app
 ]
 
 MIDDLEWARE = [
@@ -49,14 +49,13 @@ TEMPLATES = [
 WSGI_APPLICATION = "django_app.wsgi.application"
 ASGI_APPLICATION = "django_app.asgi.application"
 
-# PostgreSQL Database
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": os.getenv("POSTGRES_DB", "mis_db"),
         "USER": os.getenv("POSTGRES_USER", "mis_user"),
         "PASSWORD": os.getenv("POSTGRES_PASSWORD", "mis_password"),
-        "HOST": "db",  # Docker service name for PostgreSQL
+        "HOST": "db",
         "PORT": 5432,
     }
 }
