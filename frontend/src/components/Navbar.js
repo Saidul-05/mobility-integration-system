@@ -5,7 +5,8 @@ function Navbar() {
   return (
     <nav style={{ padding: '1rem', backgroundColor: '#ccc' }}>
       <Link to="/" style={{ marginRight: '1rem' }}>Home</Link>
-      {/* Add more links/routes as needed */}
+      <Link to="/login" style={{ marginRight: '1rem' }}>Login</Link>
+      <Link to="/register">Register</Link>
     </nav>
   );
 }
